@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Company</title>
+</head>
+
+<body>
+    <h3>Sign In</h3>
+    <form action="/signIn" method="post">
+        <label for="userid">Userid: </label>
+        <input type="text" name="userid">
+        <label for="pwd">Password: </label>
+        <input type="password" name="pwd">
+        <input type="submit">
+    </form>
+    <h3>Sign Up</h3>
+    <form action="/signUp" method="post">
+        <table>
+            <tr>
+                <td><label for="fname">First Name: </label></td>
+                <td><input type="text" name="fname"></td>
+            </tr>
+            <tr>
+                <td><label for="lname">Last Name: </label></td>
+                <td><input type="text" name="lname"></td>
+            </tr>
+            <tr>
+                <td><label for="userid">Userid: </label></td>
+                <td><input type="text" name="userid"></td>
+            </tr>
+            <tr>
+                <td><label for="dob">D.O.B.: </label></td>
+                <td><input type="date" name="dob"></td>
+            </tr>
+            <tr>
+                <td><label for="pwd">Password: </label></td>
+                <td><input type="pwd" name="pwd"></td>
+            </tr>
+
+            <tr>
+                <td> <input type="radio" name="gender" value="m"> Male
+                    <input type="radio" name="gender" value="f"> Female</td>
+
+            </tr>
+            <tr>
+                <td><input type="submit"></td>
+                <td><input type="reset"></td>
+            </tr>
+        </table>
+    </form>
+
+</body>
+
+</html>
