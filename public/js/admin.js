@@ -12,5 +12,3 @@ var addLocations = {
         this.employeeList.push(emp);
     }
 }
-
-

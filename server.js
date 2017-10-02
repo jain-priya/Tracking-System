@@ -5,7 +5,7 @@ var app = express();
 app.use(express.static("public"));
 
 
-var server = app.listen(3000, function () {
+var server = app.listen(process.env.port || 3000, function () {
     console.log("Server Start....");
 })
 app.get('/', (request, response) => {
