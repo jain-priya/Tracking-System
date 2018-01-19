@@ -13,7 +13,8 @@ var User = mongoose.Schema({
     gender: String,
     location: [{
         lat: String,
-        lng: String,
+        long: String,
+        date1: Date
     }]
 });
 var UserSchema = mongoose.model("users", User);

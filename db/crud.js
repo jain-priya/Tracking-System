@@ -40,9 +40,23 @@ const UserOperations = {
                 response.send("Invalid User");
             }
         })
+    },
+    insert: function (positionObj) {
+        userSchema.findOneAndUpdate({
+            userid: positionObj.userid
+        }, {
+            $push: {
+                location: [{
+                    lat: positionObj.lat,
+                    long: positionObj.long,
+                    date1: positionObj.date
+    }]
+            }
+
+        })
+        console.log("updated")
     }
 }
-
 
 function login(userObject, request, response) {
     console.log("Inside login " + userObject.userid);
@@ -51,11 +65,28 @@ function login(userObject, request, response) {
 
 
     if (userObject.userid == "admin" && userObject.pwd == "admin") {
-        var fullPath = path.join(normalPath, "/public/pages/admin.html");
+        var fullPath = path.join(normalPath, "/public/pages/adminScreen.html");
         response.sendFile(fullPath);
+        console.log(fullPath);
     } else {
-        var fullPath = path.join(normalPath, "/public/pages/trackee.html");
+        var fullPath = path.join(normalPath, "/public/pages/empScreen.html");
+        console.log(fullPath);
         response.sendFile(fullPath);
     }
+}
+
+function insertLoc(positionObj) {
+    db.userSchema.update({
+        userid: positionObj.userid
+    }, {
+        $push: {
+            location: [{
+                lat: positionObj.lat,
+                long: positionObj.long,
+                date1: positionObj.date
+            }]
+        }
+    })
+    console.log("Updated");
 }
 module.exports = UserOperations;

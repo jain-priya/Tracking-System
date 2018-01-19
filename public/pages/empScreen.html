@@ -1,0 +1,105 @@
+<!DOCTYPE HTML>
+
+<html>
+
+<head>
+    <title>Employee Screen</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="../assets/css/empStyle.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.0.3/socket.io.js"></script>
+    <script src="../js/login.js"></script>
+    <script src="../js/person.js"></script>
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header id="header">
+        <div class="inner">
+            <a href="index.html" class="logo"><strong>Tracking</strong> System</a>
+            <nav id="nav">
+                <a href="https://obscure-savannah-75441.herokuapp.com">Home</a>
+
+            </nav>
+            <a href="#navPanel" class="navPanelToggle"><span class="fa fa-bars"></span></a>
+        </div>
+    </header>
+
+    <!-- Banner -->
+    <section id="banner">
+        <div class="inner">
+            <header>
+                <h1>Welcome!</h1>
+            </header>
+
+            <div class="flex ">
+
+                <div>
+                    <span class="icon fa-car"></span>
+                    <h3>Track</h3>
+
+                </div>
+
+                <div>
+                    <span class="icon fa-camera"></span>
+                    <h3>Your</h3>
+
+                </div>
+
+                <div>
+                    <span class="icon fa-bug"></span>
+                    <h3>Location</h3>
+
+                </div>
+
+            </div>
+
+            <footer>
+                <a href="#" class="button">Get Started</a>
+            </footer>
+        </div>
+    </section>
+
+
+
+    <footer id="footer">
+        <div class="inner">
+
+            <h3>Get in touch</h3>
+
+
+
+            <div class="field half first">
+                <label for="name">Name</label>
+                <input name="employeename" id="ename" type="text" placeholder="Name">
+            </div>
+
+            <ul class="actions">
+                <li>
+
+                    <input value="Track " class="button alt" type="button" onclick="track()">
+
+
+                    <img id="myImage" src="../assets/images/track1.png">
+                </li>
+
+                <br>
+                <p id="demo"></p>
+
+            </ul>
+
+
+
+        </div>
+    </footer>
+
+
+    <script src="../assets/js/jquery.min.js"></script>
+    <script src="../assets/js/skel.min.js"></script>
+    <script src="../assets/js/util.js"></script>
+    <script src="../assets/js/main.js"></script>
+
+</body>
+
+</html>
